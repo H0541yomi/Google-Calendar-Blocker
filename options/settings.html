@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Settings</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+
+    <fieldset id="settings" disabled>
+
+      
+      <div>
+
+        <h2>Blocklist</h2>
+        <textarea id="blocklist" cols="60" rows="10" spellcheck="false" placeholder="Enter distracting websites here!"></textarea>
+        <p>Separate websites by line.</p>
+
+      </div>
+
+      <div>
+
+        <h2>Workblock Triggers</h2>
+
+        <h4>Event Colors</h4>
+        <input type="checkbox" id="colorLavender"> <label for="colorLavender">Lavender</label>
+        <input type="checkbox" id="colorSage"> <label for="colorSage">Sage</label>
+        <input type="checkbox" id="colorGrape"> <label for="colorGrape">Grape</label>
+        <input type="checkbox" id="colorFlamingo"> <label for="colorFlamingo">Flamingo</label>
+        <input type="checkbox" id="colorBanana"> <label for="colorBanana">Banana</label>
+        <input type="checkbox" id="colorTangerine"> <label for="colorTangerine">Tangerine</label>
+        <input type="checkbox" id="colorPeacock"> <label for="colorPeacock">Peacock</label>
+        <input type="checkbox" id="colorGraphite"> <label for="colorGraphite">Graphite</label>
+        <input type="checkbox" id="colorBlueberry"> <label for="colorBlueberry">Blueberry</label>
+        <input type="checkbox" id="colorBasil"> <label for="colorBasil">Basil</label>
+        <input type="checkbox" id="colorTomato"> <label for="colorTomato">Tomato</label>    
+
+        <h4>Event Title Keywords</h4>
+        <textarea id="titleTags" cols="25" rows="3.5" spellcheck="false" placeholder="Identify workblocks with event titles."></textarea>
+        <p>Separate tags by line.</p>
+
+        <h4>Event Description Keywords</h4>
+        <textarea id="descriptionTags" cols="25" rows="3.5" spellcheck="false" placeholder="Identify workblocks with the description."></textarea>
+        <p>Separate tags by line.</p>
+
+      </div>
+
+      <div>
+
+        <h2>Sleep Schedule</h2>
+
+        <input id="sleepSchedule" type="text" size="60" placeholder="Format: HH:mm-HH:mm">
+        <input type="checkbox" id="strictSleep"> <label for="strictSleep">Strict Sleep Mode</label>
+        <text>
+          <br><br>Set your sleep schedule so you don't have to schedule it. Strict Sleep Mode blocks all websites during your sleep schedule.
+        </text>
+
+      </div>
+
+      <div>
+
+        <h2>Blocking</h2>
+
+        <select id="blockBehavior">
+          <option value="blank">Redirect Tab</option>
+          <option value="close">Close Tab</option>
+        </select>
+        
+        <p>Choose to remove blocked tabs, or simply redirect to a blank page.</p>
+
+        <input type="checkbox" id="strictBlock"> <label for="strictBlock">Strict Block</label>
+        <p>Prevents editing the settings during blocking.</p>
+
+      </div>
+
+    </fieldset>
+
+    <div>
+      <div id="status"></div>
+      <button id="save">Save</button>
+    </div>
+
+    <script src="settings.js"></script>
+  </body>
+</html>

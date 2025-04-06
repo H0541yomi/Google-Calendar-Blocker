@@ -1,0 +1,24 @@
+{
+    "name": "GCal Blocker",
+    "description": "Syncs with Google Calendar to block distracting websites during work!",
+    "version": "0.1",
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "images/GCal128.png"
+    },
+    "background": {
+      "service_worker": "scripts/background.js"
+    },
+    "options_page": "options/settings.html",
+    "permissions": [
+    "storage", "identity", "alarms", "tabs"
+    ],
+    "oauth2": {
+        "client_id": "781492178861-7neq97l6dv2proi74vtlmllpj81gbtti.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/calendar.events.readonly"
+          ]
+    }
+  }
+
