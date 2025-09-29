@@ -9,8 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const onLaunchWebAuthFlow = async () => {
     try {
       const authUrl = new URL("https://accounts.google.com/o/oauth2/auth");
-      const clientId =
-        "781492178861-7neq97l6dv2proi74vtlmllpj81gbtti.apps.googleusercontent.com";
+
+      const config = await fetch("../config.json");
+      const configData = await config.json();
+
+      const clientId = configData.client_id;
 
       // Note: this needs to match the one used on the server (below)
       // note the lack of a trailing slash
@@ -61,8 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const exchangeCodeForToken = async (code) => {
     const tokenUrl = "https://oauth2.googleapis.com/token";
-    const clientId =
-      "781492178861-7neq97l6dv2proi74vtlmllpj81gbtti.apps.googleusercontent.com";
+
+    const config = await fetch("../config.json");
+    const configData = await config.json();
+
+    const clientId = configData.client_id;
     const redirectUri = `https://${chrome.runtime.id}.chromiumapp.org`;
 
     const secretFile = await fetch("../config.json");
