@@ -234,13 +234,11 @@ const refreshAccessToken = async () => {
     const configData = await config.json();
 
     const client_secret = configData.client_secret;
+    const client_id = configData.client_id;
 
     const params = new URLSearchParams();
     params.append("client_secret", client_secret);
-    params.append(
-      "client_id",
-      "781492178861-7neq97l6dv2proi74vtlmllpj81gbtti.apps.googleusercontent.com"
-    );
+    params.append("client_id",client_id);
     params.append("refresh_token", refreshToken);
     params.append("grant_type", "refresh_token");
 
