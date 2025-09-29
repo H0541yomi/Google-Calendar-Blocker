@@ -23,6 +23,6 @@ Since this extension is not published on the Chrome Extension store, I will need
 7. Go to chrome://extensions, look for this extension, and then click "Details". Copy the ID.
 8. Go back to creating credentials. In "Authorized Redirect URIs", paste https://{YOUR EXTENSION ID HERE}.chromiumapp.org, and then click "Save".
 9. You should now have an OAuth client. Under actions, click the download button ("Download OAuth Client") and get the Client ID and the Client Secret.
-10. Open the extension in a code editor and replace any instances of clientId/client_id and clientSecret/client_secret with your own Client ID and Client Secret.
+10. Open the extension in a code editor, then go to /config.json. Replace the placeholders for client_id and client_secret with your own Client ID and Client Secret.
 11. Go back to Google Cloud Console, and click "OAuth Consent Screen" -> "Audience" using the menu on the left. Add your google account to the list of test users. 
 12. Go back to chrome://extensions, and hit the refresh button to update the extension with your OAuth credentials. Now you can use the extension freely!
